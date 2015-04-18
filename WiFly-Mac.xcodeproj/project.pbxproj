@@ -12,6 +12,7 @@
 		310123131AE26712001C4FBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 310123121AE26712001C4FBA /* Images.xcassets */; };
 		310123161AE26712001C4FBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310123141AE26712001C4FBA /* Main.storyboard */; };
 		310123221AE26712001C4FBA /* WiFly_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310123211AE26712001C4FBA /* WiFly_MacTests.swift */; };
+		31A4348D1AE277D600E04C1D /* HttpServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4348C1AE277D600E04C1D /* HttpServer.swift */; };
 		7F36009FC7F7AA629D13C4AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A499DDCE938AF141A0712C71 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,8 @@
 		3101231B1AE26712001C4FBA /* WiFly-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WiFly-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		310123201AE26712001C4FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		310123211AE26712001C4FBA /* WiFly_MacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFly_MacTests.swift; sourceTree = "<group>"; };
+		3101232E1AE273FB001C4FBA /* WiFly-Mac-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WiFly-Mac-Bridging-Header.h"; sourceTree = "<group>"; };
+		31A4348C1AE277D600E04C1D /* HttpServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpServer.swift; sourceTree = "<group>"; };
 		79FBB52AAD079D9979D3331A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		979443E65C6C2477C6D0BC68 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A499DDCE938AF141A0712C71 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +93,9 @@
 		3101230B1AE26711001C4FBA /* WiFly-Mac */ = {
 			isa = PBXGroup;
 			children = (
+				3101232E1AE273FB001C4FBA /* WiFly-Mac-Bridging-Header.h */,
 				3101230E1AE26711001C4FBA /* AppDelegate.swift */,
+				31A4348C1AE277D600E04C1D /* HttpServer.swift */,
 				310123101AE26711001C4FBA /* ViewController.swift */,
 				310123121AE26712001C4FBA /* Images.xcassets */,
 				310123141AE26712001C4FBA /* Main.storyboard */,
@@ -269,6 +274,7 @@
 			files = (
 				310123111AE26711001C4FBA /* ViewController.swift in Sources */,
 				3101230F1AE26711001C4FBA /* AppDelegate.swift in Sources */,
+				31A4348D1AE277D600E04C1D /* HttpServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +397,7 @@
 				INFOPLIST_FILE = "WiFly-Mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./WiFly-Mac/WiFly-Mac-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -403,6 +410,7 @@
 				INFOPLIST_FILE = "WiFly-Mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./WiFly-Mac/WiFly-Mac-Bridging-Header.h";
 			};
 			name = Release;
 		};
