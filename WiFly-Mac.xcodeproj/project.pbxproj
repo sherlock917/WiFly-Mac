@@ -12,6 +12,7 @@
 		310123131AE26712001C4FBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 310123121AE26712001C4FBA /* Images.xcassets */; };
 		310123161AE26712001C4FBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310123141AE26712001C4FBA /* Main.storyboard */; };
 		310123221AE26712001C4FBA /* WiFly_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310123211AE26712001C4FBA /* WiFly_MacTests.swift */; };
+		7F36009FC7F7AA629D13C4AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A499DDCE938AF141A0712C71 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,9 @@
 		3101231B1AE26712001C4FBA /* WiFly-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WiFly-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		310123201AE26712001C4FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		310123211AE26712001C4FBA /* WiFly_MacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFly_MacTests.swift; sourceTree = "<group>"; };
+		79FBB52AAD079D9979D3331A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		979443E65C6C2477C6D0BC68 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A499DDCE938AF141A0712C71 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F36009FC7F7AA629D13C4AA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +59,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12DDF149804318A89B9E954A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A499DDCE938AF141A0712C71 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		310123001AE26711001C4FBA = {
 			isa = PBXGroup;
 			children = (
 				3101230B1AE26711001C4FBA /* WiFly-Mac */,
 				3101231E1AE26712001C4FBA /* WiFly-MacTests */,
 				3101230A1AE26711001C4FBA /* Products */,
+				8D719D9C4A6739CCD841DE85 /* Pods */,
+				12DDF149804318A89B9E954A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +124,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8D719D9C4A6739CCD841DE85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				979443E65C6C2477C6D0BC68 /* Pods.debug.xcconfig */,
+				79FBB52AAD079D9979D3331A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 310123251AE26712001C4FBA /* Build configuration list for PBXNativeTarget "WiFly-Mac" */;
 			buildPhases = (
+				0D75563D1EAA2695DA7ADC81 /* Check Pods Manifest.lock */,
 				310123051AE26711001C4FBA /* Sources */,
 				310123061AE26711001C4FBA /* Frameworks */,
 				310123071AE26711001C4FBA /* Resources */,
+				4C1B65754AE61107766E6693 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +228,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D75563D1EAA2695DA7ADC81 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4C1B65754AE61107766E6693 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		310123051AE26711001C4FBA /* Sources */ = {
@@ -325,6 +384,7 @@
 		};
 		310123261AE26712001C4FBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 979443E65C6C2477C6D0BC68 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -336,6 +396,7 @@
 		};
 		310123271AE26712001C4FBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79FBB52AAD079D9979D3331A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -400,6 +461,7 @@
 				310123271AE26712001C4FBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		310123281AE26712001C4FBA /* Build configuration list for PBXNativeTarget "WiFly-MacTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +470,7 @@
 				3101232A1AE26712001C4FBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
