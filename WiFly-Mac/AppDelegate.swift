@@ -13,6 +13,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
+        
+        let server = HttpServer.sharedInstance;
+        server.start()
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {

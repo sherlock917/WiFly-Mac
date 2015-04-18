@@ -9,6 +9,13 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    
+    @IBOutlet var tf_name: NSTextField!
+    
+    @IBAction func register(sender: AnyObject) {
+        println(tf_name.stringValue)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
